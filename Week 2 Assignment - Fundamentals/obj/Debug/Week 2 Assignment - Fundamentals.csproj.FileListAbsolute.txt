@@ -1,0 +1,8 @@
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\bin\Debug\Week 2 Assignment - Fundamentals.exe.config
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\bin\Debug\Week 2 Assignment - Fundamentals.exe
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\bin\Debug\Week 2 Assignment - Fundamentals.pdb
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\obj\Debug\Week 2 Assignment - Fundamentals.csproj.AssemblyReference.cache
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\obj\Debug\Week 2 Assignment - Fundamentals.csproj.SuggestedBindingRedirects.cache
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\obj\Debug\Week 2 Assignment - Fundamentals.csproj.CoreCompileInputs.cache
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\obj\Debug\Week 2 Assignment - Fundamentals.exe
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 2 Assignment - Fundamentals\obj\Debug\Week 2 Assignment - Fundamentals.pdb
