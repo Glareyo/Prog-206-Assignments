@@ -1,0 +1,8 @@
+And then create an Application that will do the following:
+1- Read a file and output the filename and  counts of each character ( excluding spaces ) using a dictionary
+
+2- There can be multiple files processed at once
+
+3- The text files can not be hardcoded, they must be picked up from a specific directory
+
+4- Submit on Git

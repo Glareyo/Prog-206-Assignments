@@ -1,0 +1,8 @@
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\bin\Debug\Wk 2_File IO Online Intro Learning.exe.config
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\bin\Debug\Wk 2_File IO Online Intro Learning.exe
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\bin\Debug\Wk 2_File IO Online Intro Learning.pdb
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\obj\Debug\Wk 2_File IO Online Intro Learning.csproj.AssemblyReference.cache
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\obj\Debug\Wk 2_File IO Online Intro Learning.csproj.SuggestedBindingRedirects.cache
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\obj\Debug\Wk 2_File IO Online Intro Learning.csproj.CoreCompileInputs.cache
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\obj\Debug\Wk 2_File IO Online Intro Learning.exe
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Wk 2_File IO Online Intro Learning\obj\Debug\Wk 2_File IO Online Intro Learning.pdb

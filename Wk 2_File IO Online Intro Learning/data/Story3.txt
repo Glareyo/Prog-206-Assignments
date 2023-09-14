@@ -1,0 +1,1 @@
+Properties: Those are the elements of your class that will assist in making your class functional, not all classes have properties, some only have methods and functions. By default, properties are PRIVATE, so you must add the keyword PUBLIC to make them accessible outside of your class using the Dot Notation.  Properties usually follow the class declaration as a coding standard.
