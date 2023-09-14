@@ -10,7 +10,6 @@ namespace Wk_2_File_IO_Online_Intro_Learning
 {
     public class DataReader
     {
-
         public void InitiateFileRead()
         {
             //Directory of files
