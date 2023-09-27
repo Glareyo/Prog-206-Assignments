@@ -14,6 +14,7 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
     
     public static class UIUtility
     {
+        public static Random random = new Random();
         public enum Directions { North,South,East,West };
 
         //Used to center strings
@@ -127,41 +128,6 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
             }
             Console.ResetColor();
         }
-        public static void Print(string m1, string m2, string m3, ConsoleColor c1, ConsoleColor c2, ConsoleColor c3,bool centerString, bool inLine)
-        {
-            if (centerString) CreateSpaces(m1+m2+ m3);
-            
-            Console.ForegroundColor = c1;
-            Console.Write(m1);
-
-            Console.ForegroundColor = c2;
-            Console.Write(m2);
-
-            Console.ForegroundColor = c3;
-            if (inLine) Console.Write(m3);
-            else Console.WriteLine(m3);
-            
-            Console.ResetColor();
-        }
-        public static void Print(string m1, string m2, string m3, string m4, ConsoleColor c1, ConsoleColor c2, ConsoleColor c3, ConsoleColor c4, bool centerString, bool inLine)
-        {
-            if (centerString) CreateSpaces(m1 + m2 + m3 + m4);
-
-            Console.ForegroundColor = c1;
-            Console.Write(m1);
-
-            Console.ForegroundColor = c2;
-            Console.Write(m2);
-
-            Console.ForegroundColor = c3;
-            Console.Write(m3);
-
-            Console.ForegroundColor = c4;
-            if (inLine) Console.Write(m4);
-            else Console.WriteLine(m4);
-
-            Console.ResetColor();
-        }
         public static void Print(string[] messeges, ConsoleColor[] colors, bool centerString, bool inLine)
         {
             if (centerString)
@@ -184,35 +150,20 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
 
             Console.ResetColor();
         }
-        public static void Print(List<string> messeges, List<ConsoleColor> colors, bool centerString, bool inLine)
-        {
-            if (centerString)
-            {
-                string entireMessage = "";
-                foreach (string m in messeges)
-                    entireMessage += m;
-                CreateSpaces(entireMessage);
-            }
-            for (int index = 0; index < messeges.Count - 1; index++)
-            {
-                Console.ForegroundColor = colors[index];
-                Console.Write(messeges[index]);
-            }
+        
 
-            //Final messege
-            Console.ForegroundColor = colors.Last();
-            if (inLine) Console.Write(messeges.Last());
-            else Console.WriteLine(messeges.Last());
-
-            Console.ResetColor();
-        }
 
 
         //Acts as a buffer for the player to continue forward.
         public static void Continue()
         {
             Console.WriteLine();
-            Print("Press ", "Enter ", "to Continue", ConsoleColor.Green, ConsoleColor.Magenta, ConsoleColor.Green, true, false);
+
+            string[] prompts = { "Press ", "Enter ", "to Continue" };
+            ConsoleColor[] colors = { ConsoleColor.Green, ConsoleColor.Magenta, ConsoleColor.Green };
+
+            Print(prompts, colors, true, false);
+
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine();

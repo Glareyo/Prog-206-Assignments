@@ -1,4 +1,6 @@
 using Week_3_Assignment_Simple_Text_File_and_Linked_Lists;
+using Week_3_Assignment_Simple_Text_File_and_Linked_Lists.LinkedList_Classes;
+
 
 namespace Wk3_UnitTesting
 {
@@ -112,7 +114,7 @@ namespace Wk3_UnitTesting
         [TestCategory("Item")]
         public void Item_Instantiation()
         {
-            Item item = new Item("Item", "An Item", 4);
+            Item item = new Item("Item", "An Item", 4,7);
 
             Assert.IsNotNull(item);
         }
@@ -120,17 +122,94 @@ namespace Wk3_UnitTesting
         [TestCategory("Item")]
         public void Item_GetData()
         {
-            Item item = new Item("Item", "An Item", 4);
+            Item item = new Item("Item", "An Item", 4,7);
 
             Assert.IsTrue(item.Name == "Item");
             Assert.IsTrue(item.Description == "An Item");
             Assert.IsTrue(item.Damage == 4);
+            Assert.IsTrue(item.MaxDuration == 7);
+            Assert.IsTrue(item.duration == 7);
         }
         #endregion
 
+        #region DoublyLinkedList and Nodes Unit Testing
+        [TestMethod]
+        [TestCategory("DoublyLinkedList")]
+        public void DoublyLinkedList_SearchNode()
+        {
+            DoublyLinkedList list = new DoublyLinkedList("TestList");
+            list.AddNode("Battle 1", "Battle - Won");
+            list.AddNode("Battle 2", "Battle - lost");
+            list.AddNode("Battle 3", "Battle - Won");
 
+            Node target = list.SearchNode("Battle 2");
 
+            Assert.IsTrue(target.Name == "Battle 2");
+            Assert.IsTrue(target.Information == "Battle - lost");
+        }
+        [TestMethod]
+        [TestCategory("DoublyLinkedList")]
+        public void DoublyLinkedList_AddNode()
+        {
+            DoublyLinkedList list = new DoublyLinkedList("TestList");
+            list.AddNode("Battle 1", "Battle - Won");
 
+            Assert.IsTrue(list.Nodes[0].Name == "Battle 1");
+            Assert.IsTrue(list.Nodes[0].Information == "Battle - Won");
+        }
+        [TestMethod]
+        [TestCategory("DoublyLinkedList")]
+        public void DoublyLinkedList_AddNodeToPreviousNode_FirstPlace()
+        {
+            DoublyLinkedList list = new DoublyLinkedList("TestList");
+            list.AddNode("Battle 1", "Battle - Won");
+            list.AddNode("Battle 0", "Battle - Lost",list.SearchNode("Battle 1"),true);
+
+            Assert.IsTrue(list.Nodes[0].Name == "Battle 0");
+            Assert.IsTrue(list.Nodes[0].Information == "Battle - Lost");
+            Assert.IsTrue(list.Head.Name == "Battle 0");
+            Assert.IsTrue(list.Tail.Name == "Battle 1");
+        }
+        [TestMethod]
+        [TestCategory("DoublyLinkedList")]
+        public void DoublyLinkedList_AddNodeToNextNode_LastPlace()
+        {
+            DoublyLinkedList list = new DoublyLinkedList("TestList");
+            list.AddNode("Battle 1", "Battle - Won");
+            list.AddNode("Battle 0", "Battle - Lost", list.SearchNode("Battle 1"), true);
+            list.AddNode("Battle 2", "Battle - Lost", list.SearchNode("Battle 1"), false);
+
+            Assert.IsTrue(list.Nodes[2].Name == "Battle 2");
+            Assert.IsTrue(list.Nodes[2].Information == "Battle - Lost");
+            Assert.IsTrue(list.Head.Name == "Battle 0");
+            Assert.IsTrue(list.Tail.Name == "Battle 2");
+        }
+        [TestMethod]
+        [TestCategory("DoublyLinkedList")]
+        public void DoublyLinkedList_AddNodeToNextNode_Middle()
+        {
+            DoublyLinkedList list = new DoublyLinkedList("TestList");
+            list.AddNode("Battle 1", "Battle - Won");
+            list.AddNode("Battle 2", "Battle - Won");
+            list.AddNode("Battle 3", "Battle - Lost");
+            list.AddNode("Battle 4", "Battle - Won");
+
+            //Place before battle 2
+            list.AddNode("Inter 1", "Completed", list.SearchNode("Battle 2"), true);
+            //Place before battle 4
+            list.AddNode("Inter 2", "Completed", list.SearchNode("Battle 4"), true);
+            //Place after battle 4
+            list.AddNode("Inter 3", "Completed", list.SearchNode("Battle 4"), false);
+
+            Assert.IsTrue(list.Nodes[0].Name == "Battle 1");
+            Assert.IsTrue(list.Nodes[1].Name == "Inter 1");
+            Assert.IsTrue(list.Nodes[2].Name == "Battle 2");
+            Assert.IsTrue(list.Nodes[3].Name == "Battle 3");
+            Assert.IsTrue(list.Nodes[4].Name == "Inter 2");
+            Assert.IsTrue(list.Nodes[5].Name == "Battle 4");
+            Assert.IsTrue(list.Nodes[6].Name == "Inter 3");
+        }
+        #endregion
 
     }
 }

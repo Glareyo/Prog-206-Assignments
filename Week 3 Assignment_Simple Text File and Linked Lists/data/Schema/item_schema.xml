@@ -4,12 +4,12 @@
 		<Name>type</Name>
 		<Description>type</Description>
 		<Damage>1</Damage>
-		<LocationID>type</LocationID>
+		<Duration>1</Duration>
 	</Item>
 	<Item>
 		<Name>type</Name>
 		<Description>type</Description>
 		<Damage>1</Damage>
-		<LocationID>type</LocationID>
+		<Duration>1</Duration>
 	</Item>
 </Item-data>

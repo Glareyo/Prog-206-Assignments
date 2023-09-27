@@ -8,7 +8,6 @@
 		<sRoomID>6</sRoomID>
 		<eRoomID>6</eRoomID>
 		<wRoomID>6</wRoomID>
-		<trapID>6</trapID>
 	</Room>
 	<Room>
 		<ID>ID</ID>
@@ -18,6 +17,5 @@
 		<sRoomID>6</sRoomID>
 		<eRoomID>6</eRoomID>
 		<wRoomID>6</wRoomID>
-		<trapID>6</trapID>
 	</Room>
 </Room-data>

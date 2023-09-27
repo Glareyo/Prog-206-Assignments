@@ -11,7 +11,7 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
     {
         //Basic Info on player
         private string name; public string Name { get { return this.name; } } //Name
-        public int lives = 3; //Num of lives.
+        public int hp; //Health
 
         //Location of the player
         private Room loc; public Room Location { get { return this.loc; } }
@@ -24,6 +24,7 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
             this.name = _name;
             this.loc = _loc;
             this.inv = new List<Item>();
+            this.hp = 200;
         }
 
         public string Move(Room targetRoom)

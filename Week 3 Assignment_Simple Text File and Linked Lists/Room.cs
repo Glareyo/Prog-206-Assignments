@@ -22,6 +22,8 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
         //Items in room
         public List<Item> loot = new List<Item>();
 
+        //Monster in the room
+        public Monster Monster;
 
         //Encapsulation so that the information does not change.
         public int GetID { get { return id; } }
@@ -34,7 +36,9 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
             this.name = _name;
             this.description = _description;
 
-            adjRooms = _adjRoomIDs;
+            this.adjRooms = _adjRoomIDs;
+
+            Monster = null;
         }
         
         public int GiveAdjRoomID(UIUtility.Directions dir)

@@ -1,0 +1,23 @@
+Battle 1
+Dwarf fought in the Courtyard.
+Battle Lost
+
+Battle 2
+Dwarf fought in the Courtyard.
+Battle Lost
+
+Battle 3
+Dwarf fought in the Courtyard.
+Battle Lost
+
+Battle 4
+Dwarf fought in the Courtyard.
+Battle Lost
+
+Battle 5
+Dwarf fought in the Courtyard.
+Battle Lost
+
+Game Lost
+Player has LOST the Game
+

@@ -3,19 +3,37 @@
 	<Item>
 		<Name>Knife</Name>
 		<Description>A small knife</Description>
-		<Damage>1</Damage>
-		<LocationID>1</LocationID>
+		<Damage>5</Damage>
+		<Duration>10</Duration>
 	</Item>
 	<Item>
 		<Name>Stick</Name>
 		<Description>A large stick</Description>
-		<Damage>3</Damage>
-		<LocationID>3</LocationID>
+		<Damage>10</Damage>
+		<Duration>20</Duration>
 	</Item>
 	<Item>
 		<Name>Mace</Name>
 		<Description>A heavy mace</Description>
-		<Damage>6</Damage>
-		<LocationID>2</LocationID>
+		<Damage>20</Damage>
+		<Duration>30</Duration>
+	</Item>
+	<Item>
+		<Name>Bottle</Name>
+		<Description>A thick glass bottle</Description>
+		<Damage>8</Damage>
+		<Duration>5</Duration>
+	</Item>
+	<Item>
+		<Name>Cannon</Name>
+		<Description>A hand-held Cannon</Description>
+		<Damage>70</Damage>
+		<Duration>1</Duration>
+	</Item>
+	<Item>
+		<Name>Sword</Name>
+		<Description>A rusty sword</Description>
+		<Damage>15</Damage>
+		<Duration>15</Duration>
 	</Item>
 </Item-data>
