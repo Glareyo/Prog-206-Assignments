@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week 3 Assignment_Simple Text File and Linked Lists", "Week 3 Assignment_Simple Text File and Linked Lists.csproj", "{136AB60A-4C78-4E03-B97E-86CD63A59E8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wk3_UnitTesting", "..\Wk3_UnitTesting\Wk3_UnitTesting.csproj", "{8738D9DB-3E69-4E86-ACE7-04B1869AF4BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{136AB60A-4C78-4E03-B97E-86CD63A59E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{136AB60A-4C78-4E03-B97E-86CD63A59E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{136AB60A-4C78-4E03-B97E-86CD63A59E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8738D9DB-3E69-4E86-ACE7-04B1869AF4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8738D9DB-3E69-4E86-ACE7-04B1869AF4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8738D9DB-3E69-4E86-ACE7-04B1869AF4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8738D9DB-3E69-4E86-ACE7-04B1869AF4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,8 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
     {
         static void Main(string[] args)
         {
-
+            Game game = new Game();
+            game.InitGame();
         }
     }
 }

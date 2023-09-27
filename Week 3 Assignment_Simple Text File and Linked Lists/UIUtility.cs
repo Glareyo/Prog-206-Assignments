@@ -14,6 +14,8 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
     
     public static class UIUtility
     {
+        public enum Directions { North,South,East,West };
+
         //Used to center strings
         static void CreateSpaces(string message)
         {
@@ -141,7 +143,7 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
             
             Console.ResetColor();
         }
-        public static void Print(string m1, string m2, string m3,string m4, ConsoleColor c1, ConsoleColor c2, ConsoleColor c3,ConsoleColor c4, bool centerString, bool inLine)
+        public static void Print(string m1, string m2, string m3, string m4, ConsoleColor c1, ConsoleColor c2, ConsoleColor c3, ConsoleColor c4, bool centerString, bool inLine)
         {
             if (centerString) CreateSpaces(m1 + m2 + m3 + m4);
 
@@ -160,8 +162,52 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
 
             Console.ResetColor();
         }
-        
-        
+        public static void Print(string[] messeges, ConsoleColor[] colors, bool centerString, bool inLine)
+        {
+            if (centerString)
+            {
+                string entireMessage = "";
+                foreach (string m in messeges)
+                    entireMessage += m;
+                CreateSpaces(entireMessage);
+            }
+            for (int index = 0; index < messeges.Length - 1; index++)
+            {
+                Console.ForegroundColor = colors[index];
+                Console.Write(messeges[index]);
+            }
+
+            //Final messege
+            Console.ForegroundColor = colors.Last();
+            if (inLine) Console.Write(messeges.Last());
+            else Console.WriteLine(messeges.Last());
+
+            Console.ResetColor();
+        }
+        public static void Print(List<string> messeges, List<ConsoleColor> colors, bool centerString, bool inLine)
+        {
+            if (centerString)
+            {
+                string entireMessage = "";
+                foreach (string m in messeges)
+                    entireMessage += m;
+                CreateSpaces(entireMessage);
+            }
+            for (int index = 0; index < messeges.Count - 1; index++)
+            {
+                Console.ForegroundColor = colors[index];
+                Console.Write(messeges[index]);
+            }
+
+            //Final messege
+            Console.ForegroundColor = colors.Last();
+            if (inLine) Console.Write(messeges.Last());
+            else Console.WriteLine(messeges.Last());
+
+            Console.ResetColor();
+        }
+
+
         //Acts as a buffer for the player to continue forward.
         public static void Continue()
         {
@@ -178,64 +224,6 @@ namespace Week_3_Assignment_Simple_Text_File_and_Linked_Lists
             for (int i = 0; i < Console.WindowWidth; i++)
                 Console.Write("-");
             Console.WriteLine();
-        }
-
-
-
-        //ASCII Arts
-        //ASCII art generated from TextKool ASCII Art Generator
-        //https://textkool.com/en/ascii-art-generator?hl=controlled%20smushing&vl=controlled%20smushing&font=Puffy&text=The%20Ancient%20Relic
-        public static void GameWon()
-        {
-            //ASCII art generated from TextKool ASCII Art Generator
-            //https://textkool.com/en/ascii-art-generator?hl=controlled%20smushing&vl=controlled%20smushing&font=Puffy&text=The%20Ancient%20Relic
-
-            string title1 = @"
-██████╗ ███████╗██╗     ██╗ ██████╗    ███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗ 
-██╔══██╗██╔════╝██║     ██║██╔════╝    ██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗
-██████╔╝█████╗  ██║     ██║██║         █████╗  ██║   ██║██║   ██║██╔██╗ ██║██║  ██║
-██╔══██╗██╔══╝  ██║     ██║██║         ██╔══╝  ██║   ██║██║   ██║██║╚██╗██║██║  ██║
-██║  ██║███████╗███████╗██║╚██████╗    ██║     ╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝
-╚═╝  ╚═╝╚══════╝╚══════╝╚═╝ ╚═════╝    ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ 
-                                                                                   ";
-            string title2 = @"
-██╗   ██╗ ██████╗ ██╗   ██╗    ██╗    ██╗██╗███╗   ██╗    ██╗
-╚██╗ ██╔╝██╔═══██╗██║   ██║    ██║    ██║██║████╗  ██║    ██║
- ╚████╔╝ ██║   ██║██║   ██║    ██║ █╗ ██║██║██╔██╗ ██║    ██║
-  ╚██╔╝  ██║   ██║██║   ██║    ██║███╗██║██║██║╚██╗██║    ╚═╝
-   ██║   ╚██████╔╝╚██████╔╝    ╚███╔███╔╝██║██║ ╚████║    ██╗
-   ╚═╝    ╚═════╝  ╚═════╝      ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═╝
-                                                             ";
-
-            Print(title1, ConsoleColor.Green, true, false);
-            Print(title2, ConsoleColor.Yellow, true, false);
-            Continue();
-        }
-        public static void TitleCard()
-        {
-            //ASCII art generated from TextKool ASCII Art Generator
-            //https://textkool.com/en/ascii-art-generator?hl=controlled%20smushing&vl=controlled%20smushing&font=Puffy&text=The%20Ancient%20Relic
-
-            string title1 = @"
- _____ _                ___                           _           ___           
-(_   _| )              (  _`\                        ( )        /'___)          
-  | | | |__     __     | (_(_)   __     _ _ _ __  ___| |__     | (__  _    _ __ 
-  | | |  _ `\ /'__`\   `\__ \  /'__`\ /'_` | '__)'___)  _ `\   | ,__)'_`\ ( '__)
-  | | | | | |(  ___/   ( )_) |(  ___/( (_| | | ( (___| | | |   | | ( (_) )| |   
-  (_) (_) (_)`\____)   `\____)`\____)`\__,_|_) `\____|_) (_)   (_) `\___/'(_)   
-                                                                                
-                                                                                ";
-            string title2 = @"
- _____ _                _____                               _       ___          _            
-(_   _| )              (  _  )             _               ( )_    |  _`\       (_ ) _        
-  | | | |__     __     | (_) | ___     ___(_)   __    ___  | ,_)   | (_) )   __  | |(_)   ___ 
-  | | |  _ `\ /'__`\   |  _  /' _ `\ /'___) | /'__`\/' _ `\| |     | ,  /  /'__`\| || | /'___)
-  | | | | | |(  ___/   | | | | ( ) |( (___| |(  ___/| ( ) || |_    | |\ \ (  ___/| || |( (___ 
-  (_) (_) (_)`\____)   (_) (_|_) (_)`\____|_)`\____)(_) (_)`\__)   (_) (_)`\____|___|_)`\____)
-";
-                
-            Print(title1, ConsoleColor.Red, true, false);
-            Print(title2, ConsoleColor.Red, true, false);
         }
     }
 }

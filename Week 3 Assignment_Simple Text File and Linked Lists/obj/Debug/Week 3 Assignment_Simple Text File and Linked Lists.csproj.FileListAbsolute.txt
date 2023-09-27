@@ -6,3 +6,11 @@ C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_S
 C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.csproj.CoreCompileInputs.cache
 C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.exe
 C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.pdb
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\bin\Debug\Week 3 Assignment_Simple Text File and Linked Lists.exe.config
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\bin\Debug\Week 3 Assignment_Simple Text File and Linked Lists.exe
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\bin\Debug\Week 3 Assignment_Simple Text File and Linked Lists.pdb
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.csproj.AssemblyReference.cache
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.csproj.SuggestedBindingRedirects.cache
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.csproj.CoreCompileInputs.cache
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.exe
+C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 3 Assignment_Simple Text File and Linked Lists\obj\Debug\Week 3 Assignment_Simple Text File and Linked Lists.pdb

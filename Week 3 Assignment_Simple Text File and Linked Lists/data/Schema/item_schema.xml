@@ -3,11 +3,13 @@
 	<Item>
 		<Name>type</Name>
 		<Description>type</Description>
+		<Damage>1</Damage>
 		<LocationID>type</LocationID>
 	</Item>
 	<Item>
 		<Name>type</Name>
 		<Description>type</Description>
+		<Damage>1</Damage>
 		<LocationID>type</LocationID>
 	</Item>
 </Item-data>
