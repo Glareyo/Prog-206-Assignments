@@ -13,7 +13,8 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
         public enum FileTypes { csv, txt }
         public enum DelimiterTypes { pipe, comma }
 
-        
+
+        public List<IFileInformation> allFiles {get; set;}
 
         // Path that leads to all the required files
         string folderPath = Directory.GetCurrentDirectory();
@@ -29,15 +30,21 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
             folderPath += targetFilePath;
         }
 
-        //Get the files
+        /// <summary>
+        /// Get the files from the designated file path.
+        /// </summary>
         public void InitDataCreation()
         {
             //Seperate the files based on file types
-            List<IFileInformation> allFiles = GetTargetFiles();
+           allFiles = GetTargetFiles();
 
             
         }
 
+        /// <summary>
+        /// Create all the target files.
+        /// </summary>
+        /// <returns></returns>
         public List<IFileInformation> GetTargetFiles()
         {
             List<IFileInformation> allFiles = new List<IFileInformation>();
@@ -50,19 +57,26 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
                     //Needs a name, path, delimiter, and fileType
                     FileInfo newFile;
 
+                    // Name the file
+                    // Get the path of the file.
                     string name = file.Substring(file.LastIndexOf('\\') + 1);
                     string path = file;
 
                     if (file.Contains(".csv"))
-                    {
+                    {// If it is a CSV, store as a CSV with a comma
                         newFile = new FileInfo(name, path, DelimiterTypes.comma, FileTypes.csv);
                     }
                     else
-                    {
+                    {// If a TXT, store as txt with |
                         newFile = new FileInfo(name, path, DelimiterTypes.pipe, FileTypes.txt);
                     }
+
+                    //Add to file class
+                    allFiles.Add(newFile);
                 }
             }
+
+            //Return new file list
             return allFiles;
         }
     }
