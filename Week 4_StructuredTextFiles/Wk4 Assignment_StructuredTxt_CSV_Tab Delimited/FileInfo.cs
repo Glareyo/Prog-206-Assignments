@@ -18,6 +18,7 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
         public char Delimiter { get; set; }
         public string FileType { get; set; }
 
+        public string DecipheredData { get; set; }
 
         //Constructor
         public FileInfo(string _name, string _path, DataHandler.DelimiterTypes _delimiter, DataHandler.FileTypes _fileType)

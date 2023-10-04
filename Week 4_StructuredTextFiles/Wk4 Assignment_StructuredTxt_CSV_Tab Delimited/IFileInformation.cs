@@ -13,5 +13,6 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
         string Path { get; set; }
         char Delimiter { get; set; }
         string FileType { get; set; }
+        string DecipheredData { get; set; }
     }
 }

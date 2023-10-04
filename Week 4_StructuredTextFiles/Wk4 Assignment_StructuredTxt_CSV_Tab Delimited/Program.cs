@@ -17,9 +17,21 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
             DataHandler data = new DataHandler();
             data.InitDataCreation();
 
-            foreach(var file in data.allFiles)
+            /*foreach(var file in data.allFiles)
             {
                 Console.WriteLine(file.Name);
+            }*/
+
+            foreach(var file in data.TXTFiles)
+            {
+                Console.WriteLine(file.DecipheredData);
+            }
+
+            Console.WriteLine("\n");
+
+            foreach (var file in data.CSVFiles)
+            {
+                Console.WriteLine(file.DecipheredData);
             }
 
             Console.ReadLine();

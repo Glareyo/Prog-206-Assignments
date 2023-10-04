@@ -10,14 +10,23 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
     //Handles reading data
     public class DataHandler
     {
+        // Enums for assigning file types
         public enum FileTypes { csv, txt }
         public enum DelimiterTypes { pipe, comma }
 
-
+        // Holds all files
         public List<IFileInformation> allFiles {get; set;}
+        public List<IFileInformation> CSVFiles = new List<IFileInformation>();
+        public List<IFileInformation> TXTFiles = new List<IFileInformation>();
+
+
+        // Engine that'll take in all target files and get the data
+        Engine engine;
 
         // Path that leads to all the required files
         string folderPath = Directory.GetCurrentDirectory();
+
+        
 
         //Constructor
         //Used mainly for unit testing
@@ -35,10 +44,55 @@ namespace Wk4_Assignment_StructuredTxt_CSV_Tab_Delimited
         /// </summary>
         public void InitDataCreation()
         {
+            engine = new Engine();
             //Seperate the files based on file types
-           allFiles = GetTargetFiles();
+            allFiles = GetTargetFiles();
 
-            
+            //Seperate based on file type
+
+            CSVFiles = new List<IFileInformation>();
+            TXTFiles = new List<IFileInformation>();
+
+            foreach(IFileInformation file in allFiles)
+            {
+                if (file.FileType == ".txt")
+                {
+                    TXTFiles.Add(file);
+                }
+                else if (file.FileType == ".csv")
+                {
+                    CSVFiles.Add(file);
+                }
+            }
+            // Decipher txt files
+            engine.DecipherFileData(TXTFiles);
+            // Decipher csv files
+            engine.DecipherFileData(CSVFiles);
+
+            PublishIntoFiles();
+        }
+
+        public void PublishIntoFiles()
+        {
+            //Go through each file
+            foreach(IFileInformation file in allFiles)
+            {
+                string name = "Sample";
+                
+                if (file.FileType == ".csv")
+                {
+                    name += "CSV";
+                }
+                else
+                {
+                    name += "Pipe";
+                }
+                name += "_out.txt";
+
+                //Create a new text file in the target folder path with the new name.
+                string tempPath = Path.Combine(folderPath, name);
+                File.WriteAllText(tempPath,file.DecipheredData);
+            }
         }
 
         /// <summary>
