@@ -1,23 +1,15 @@
 Battle 1
 Dwarf fought in the Courtyard.
-Battle Lost
+Battle Won
 
 Battle 2
-Dwarf fought in the Courtyard.
-Battle Lost
+Mage fought in the Tower Entry.
+Battle Won
 
 Battle 3
-Dwarf fought in the Courtyard.
-Battle Lost
+Knight fought in the Tower Top.
+Battle Won
 
-Battle 4
-Dwarf fought in the Courtyard.
-Battle Lost
-
-Battle 5
-Dwarf fought in the Courtyard.
-Battle Lost
-
-Game Lost
-Player has LOST the Game
+Game Won
+Player has WON the Game
 
