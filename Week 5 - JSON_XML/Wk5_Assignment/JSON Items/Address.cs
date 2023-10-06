@@ -14,11 +14,27 @@ namespace Wk5_Assignment.JSON_Items
     {
         [JsonProperty("streetAddress")]
         string streetAddress { get; set; }
+        
         [JsonProperty("city")]
         string city { get; set; }
+        
         [JsonProperty("state")]
         string state { get; set; }
+        
         [JsonProperty("postalCode")]
         string postalCode { get; set; }
+
+        public string[] RetrieveFullAddress()
+        {
+            string[] info =
+            {
+                streetAddress,
+                city,
+                state,
+                postalCode
+            };
+
+            return info;
+        }
     }
 }

@@ -13,18 +13,24 @@ namespace Wk5_Assignment.JSON_Items
     public class Student
     {
         [JsonProperty("firstName")]
-        string FirstName { get; set; }
+        public string FirstName { get; set; }
+        
         [JsonProperty("lastName")]
-        string LastName { get; set; }
+        public string LastName { get; set; }
+        
         [JsonProperty("isEnrolled")]
-        bool isEnrolled { get; set; }
+        public bool isEnrolled { get; set; }
+
         [JsonProperty("YearsEnrolled")]
-        int YearsEnrolled { get; set; }
+        public int YearsEnrolled { get; set; }
+        
         [JsonProperty("address1")]
-        Address Address1 { get; set; }
+        public Address Address1 { get; set; }
+        
         [JsonProperty("address2")]
-        Address Address2 { get; set; }
+        public Address Address2 { get; set; }
+        
         [JsonProperty("phoneNumbers")]
-        List<Phone> PhoneNumbers = new List<Phone>();
+        public List<Phone> PhoneNumbers = new List<Phone>();
     }
 }

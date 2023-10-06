@@ -13,12 +13,18 @@ namespace Wk5_Assignment.JSON_Items
     public class Phone
     {
         [JsonProperty("type")]
-        string type { get; set; }
+        public string type { get; set; }
 
         [JsonProperty("number")]
-        string number { get; set; }
+        public string number { get; set; }
 
         [JsonProperty("CanContact")]
-        bool CanContact { get; set; }
+        public bool CanContact { get; set; }
+
+        public string[] RetrievePhoneInfo()
+        {
+            string[] info = { type,number,CanContact.ToString()};
+            return info;
+        }
     }
 }

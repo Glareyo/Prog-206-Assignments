@@ -64,6 +64,8 @@ namespace Wk5_Assignment
                         engine.BeginDeciphering(file);
                         break;
                     case FileTypes.json:
+                        engine = new JSONEngine();
+                        engine.BeginDeciphering(file);
                         break;
                     case FileTypes.xml:
                         engine = new XMLEngine();
