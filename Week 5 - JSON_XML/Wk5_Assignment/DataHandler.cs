@@ -66,6 +66,8 @@ namespace Wk5_Assignment
                     case FileTypes.json:
                         break;
                     case FileTypes.xml:
+                        engine = new XMLEngine();
+                        engine.BeginDeciphering(file);
                         break;
                 }
                 

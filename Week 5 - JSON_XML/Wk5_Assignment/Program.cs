@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Wk5_Assignment
 {
+    // Credit:
+    // Leo Hazou, for providing documentation and presentation of XML file reading,
+    // Code below is an exact copy of the code provided in the presentations.
     internal class Program
     {
         static void Main(string[] args)

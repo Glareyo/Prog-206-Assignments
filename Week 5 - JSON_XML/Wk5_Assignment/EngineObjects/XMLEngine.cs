@@ -20,18 +20,44 @@ namespace Wk5_Assignment.EngineObjects
         }
         public override string DecipherFile(IFileInformation file)
         {
+            string dataString = "";
+
+
+            // Initiate reading of the file
             using (var fs = File.Open(file.Path,FileMode.Open))
             {
+                // XmlSerilizer ==> Basically not sure what it does.
+                // Code will target the grocery object, in which grocery begins with the root of menu.
                 XmlSerializer s = new XmlSerializer(typeof(Grocery));
+
+                // Inventory then acts as an object, instantiating a grocery
+                // Deserialize pretty much reads through each root/line and creates the items.
                 var inventory = (Grocery)s?.Deserialize(fs);
+                inventory.CreateItemDescriptions();
 
                 // Run through the produced list and create the file information
-                //for (int itemNum = 0; itemNum < inventory.Items.Count)
+                for (int itemNum = 0; itemNum < inventory.Items.Count; itemNum++)
+                {
+                    // Go through each line
+                    //Start with which line is being read
+                    dataString += $"Line#{itemNum + 1} :";
+                    // Break line into text array from delimiter
+                    string[] text = inventory.Items[itemNum].description;
 
+                    //Run a loop through the split text
+                    for (int textNum = 0; textNum < text.Length; textNum++)
+                    {
+                        //Add field number and associated text
+                        dataString += $"Field#{textNum + 1}={text[textNum]}";
+
+                        //If it is not the last string of text, add the ==>
+                        if (textNum != text.Length - 1) dataString += " ==> ";
+                    }
+                    dataString += "\n\n";
+                }
             }
 
-
-            return base.DecipherFile(file);
+            return dataString;
         }
     }
 }
