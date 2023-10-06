@@ -7,6 +7,10 @@ using System.Xml.Serialization;
 
 namespace Wk5_Assignment.CVS_Items
 {
+    // Credit:
+    // Leo Hazou, for providing documentation and presentation of XML file reading,
+    // Code below is an exact copy of the code provided in the presentations.
+
     // Main target for reading an XML Document
     [XmlRoot(ElementName = "item")]
     public class Item

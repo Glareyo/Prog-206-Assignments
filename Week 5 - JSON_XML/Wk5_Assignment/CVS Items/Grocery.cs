@@ -18,13 +18,5 @@ namespace Wk5_Assignment.CVS_Items
         //Target for the items
         [XmlElement(ElementName = "item")]
         public List<Item> Items { get; set; }
-
-        public void CreateItemDescriptions()
-        {
-            foreach(Item item in Items)
-            {
-                item.CreateDescription();
-            }
-        }
     }
 }

@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Week 4_StructuredTextFiles",
-    "\\Week 4_StructuredTextFiles\\Wk4 Assignment_StructuredTxt_CSV_Tab Delimited",
-    "\\Week 5 - JSON_XML"
+    "\\Week 5 - JSON_XML",
+    "\\Week 5 - JSON_XML\\Wk5_Assignment",
+    "\\Week 5 - JSON_XML\\Wk5_Assignment\\EngineObjects",
+    "\\Week 5 - JSON_XML\\Wk5_Demo"
   ],
+  "SelectedNode": "\\Week 5 - JSON_XML\\Wk5_Assignment\\EngineObjects\\XMLEngine.cs",
   "PreviewInSolutionExplorer": false
 }

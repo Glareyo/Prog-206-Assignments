@@ -22,6 +22,10 @@ namespace Wk5_Assignment.EngineObjects
         {
             string dataString = "";
 
+            // Credit:
+            // Leo Hazou, for providing documentation and presentation of XML file reading,
+            // Code below is an exact copy of the code provided in the presentations with a few minor changes.
+
 
             // Initiate reading of the file
             using (var fs = File.Open(file.Path,FileMode.Open))
@@ -33,11 +37,12 @@ namespace Wk5_Assignment.EngineObjects
                 // Inventory then acts as an object, instantiating a grocery
                 // Deserialize pretty much reads through each root/line and creates the items.
                 var inventory = (Grocery)s?.Deserialize(fs);
-                inventory.CreateItemDescriptions();
+                
 
                 // Run through the produced list and create the file information
                 for (int itemNum = 0; itemNum < inventory.Items.Count; itemNum++)
                 {
+                    inventory.Items[itemNum].CreateDescription();
                     // Go through each line
                     //Start with which line is being read
                     dataString += $"Line#{itemNum + 1} :";
