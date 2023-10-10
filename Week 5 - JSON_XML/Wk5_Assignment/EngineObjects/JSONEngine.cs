@@ -29,38 +29,61 @@ namespace Wk5_Assignment.EngineObjects
             // Initiate reading of the file
             using (StreamReader sr = new StreamReader(file.Path))
             {
+                // Deserialize the objects and place into student
                 Student student = JsonConvert.DeserializeObject<Student>(sr.ReadToEnd());
 
-                Console.WriteLine(student.FirstName);
+                ///Code works
+                /*Console.WriteLine(student.FirstName);
                 Console.WriteLine(student.LastName);
                 foreach(string s in student.Address1.RetrieveFullAddress())
                     Console.WriteLine(s);
+                foreach(Phone phone in student.PhoneNumbers)
+                {
+                    Console.WriteLine(phone.number);
+                    Console.WriteLine(phone.CanContact);
+                    Console.WriteLine(phone.type);
+                }*/
 
-                /*
-                                // Run through the produced list and create the file information
-                                for (int itemNum = 0; itemNum < inventory.Items.Count; itemNum++)
-                                {
-                                    inventory.Items[itemNum].CreateDescription();
-                                    // Go through each line
-                                    //Start with which line is being read
-                                    dataString += $"Line#{itemNum + 1} :";
-                                    // Break line into text array from delimiter
-                                    string[] text = inventory.Items[itemNum].description;
 
-                                    //Run a loop through the split text
-                                    for (int textNum = 0; textNum < text.Length; textNum++)
-                                    {
-                                        //Add field number and associated text
-                                        dataString += $"Field#{textNum + 1}={text[textNum]}";
+                //Get the student and add into the IFileInformation Data
+                int lineNum = 1;
+                // Store first and last name
+                string data = $"Line#{lineNum} : Field#1={student.FirstName} ==> Field#2{student.LastName}\n\n";
+                lineNum++;
+                // Add IsEnrolled and YearsEnrolled
+                data += $"Line#{lineNum} : Field#1={student.isEnrolled} ==> Field#2={student.YearsEnrolled}\n\n";
+                lineNum++;
 
-                                        //If it is not the last string of text, add the ==>
-                                        if (textNum != text.Length - 1) dataString += " ==> ";
-                                    }
-                                    dataString += "\n\n";
-                                }*/
+                // Add addresses
+                data += AddAddress(lineNum, student.Address1);
+                lineNum++;
+
+                data += AddAddress(lineNum, student.Address2);
+                lineNum++;
+
+                //Add Phone Numbers
+                
+
             }
 
             return dataString;
+        }
+
+        public string AddAddress(int lineNum, Address address)
+        {
+            string returningData = $"";
+
+            // Check to see if the address exists, else return an empty string
+            if (address != null)
+            {
+                returningData = $"Line#{lineNum} : ";
+                returningData += $"Field#1={address.streetAddress} ==> ";
+                returningData += $"Field#2={address.city} ==> ";
+                returningData += $"Field#3={address.state} ==> ";
+                returningData += $"Field#4={address.postalCode}\n\n";
+            }
+
+            return returningData;
         }
     }
 }

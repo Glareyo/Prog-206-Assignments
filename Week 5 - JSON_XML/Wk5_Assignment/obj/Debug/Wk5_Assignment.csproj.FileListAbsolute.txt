@@ -17,3 +17,6 @@ C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_A
 C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_Assignment\bin\Debug\Newtonsoft.Json.dll
 C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_Assignment\bin\Debug\Newtonsoft.Json.xml
 C:\Users\nemo1\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_Assignment\obj\Debug\Wk5_Assignment.csproj.CopyComplete
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_Assignment\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_Assignment\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cedillo02\Source\Repos\Glareyo\Prog-206-Assignments\Week 5 - JSON_XML\Wk5_Assignment\obj\Debug\Wk5_Assignment.csproj.CopyComplete

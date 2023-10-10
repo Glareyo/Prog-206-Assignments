@@ -13,16 +13,16 @@ namespace Wk5_Assignment.JSON_Items
     public class Address
     {
         [JsonProperty("streetAddress")]
-        string streetAddress { get; set; }
+        public string streetAddress { get; set; }
         
         [JsonProperty("city")]
-        string city { get; set; }
+        public string city { get; set; }
         
         [JsonProperty("state")]
-        string state { get; set; }
+        public string state { get; set; }
         
         [JsonProperty("postalCode")]
-        string postalCode { get; set; }
+        public string postalCode { get; set; }
 
         public string[] RetrieveFullAddress()
         {
