@@ -1,0 +1,10 @@
+Line#1 : Field#1=John ==> Field#2Doe
+
+Line#2 : Field#1=True ==> Field#2=2
+
+Line#3 : Field#1=916 S. Wabash ==> Field#2=Chicago ==> Field#3=IL ==> Field#4=60000
+
+Line#4 : Field#1=Mobile ==> Field#2=999-123-1234 ==> Field#3=True
+
+Line#5 : Field#1=Home ==> Field#2=999-789-6789 ==> Field#3=True
+

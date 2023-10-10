@@ -55,15 +55,28 @@ namespace Wk5_Assignment.EngineObjects
                 lineNum++;
 
                 // Add addresses
-                data += AddAddress(lineNum, student.Address1);
-                lineNum++;
-
-                data += AddAddress(lineNum, student.Address2);
-                lineNum++;
+                if (student.Address1 != null)
+                {
+                    data += AddAddress(lineNum, student.Address1);
+                    lineNum++;
+                }
+                if (student.Address2 != null)
+                {
+                    data += AddAddress(lineNum, student.Address2);
+                    lineNum++;
+                }
 
                 //Add Phone Numbers
-                
+                foreach(Phone phone in student.PhoneNumbers)
+                {
+                    data += $"Line#{lineNum} : ";
+                    data += $"Field#1={phone.type} ==> ";
+                    data += $"Field#2={phone.number} ==> ";
+                    data += $"Field#3={phone.CanContact}\n\n";
+                    lineNum++;
+                }
 
+                dataString = data;
             }
 
             return dataString;
