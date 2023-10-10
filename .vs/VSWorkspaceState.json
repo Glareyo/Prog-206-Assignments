@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Week 5 - JSON_XML",
-    "\\Week 5 - JSON_XML\\Wk5_Assignment",
-    "\\Week 5 - JSON_XML\\Wk5_Assignment\\EngineObjects",
-    "\\Week 5 - JSON_XML\\Wk5_Demo"
+    "\\Week 5 - JSON_XML\\Wk5_Assignment"
   ],
-  "SelectedNode": "\\Week 5 - JSON_XML\\Wk5_Assignment\\EngineObjects\\XMLEngine.cs",
+  "SelectedNode": "\\Week 5 - JSON_XML\\Wk5_Assignment\\DataHandler.cs",
   "PreviewInSolutionExplorer": false
 }
