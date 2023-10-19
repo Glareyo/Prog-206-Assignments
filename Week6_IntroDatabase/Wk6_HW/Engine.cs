@@ -46,8 +46,6 @@ namespace Wk6_HW
                 }
                 file.Data.Add(incomingData);
             }
-
-
             file.Data.RemoveAt(0);
         }
     }
