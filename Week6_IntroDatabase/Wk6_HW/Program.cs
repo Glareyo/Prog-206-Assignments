@@ -1,6 +1,17 @@
-﻿// Using the classes that'll read the SQL Client
+﻿// Nehemiah Cedillo
+// FA23-PROG 260-01
+
+//Credit: Documentation + Online Question on how to replace chars within a column
+//https://stackoverflow.com/questions/814548/how-to-replace-a-string-in-a-sql-server-table-column
+//https://www.w3schools.com/SQL/func_sqlserver_replace.asp
+
+// Credit: Leo Hazou
+//Provided Presentation / Lectures on DataDesign
+
+// Using the classes that'll read the SQL Client
 using System.Data.SqlClient;
 using Wk6_HW;
+using static System.Net.WebRequestMethods;
 
 DataHandler data = new DataHandler();
 
@@ -48,6 +59,16 @@ using (SqlConnection conn = new SqlConnection(sqlConStr))
         }
 
 
+        
+        //Credit: Documentation + Online Question on how to replace chars within a column
+        //https://stackoverflow.com/questions/814548/how-to-replace-a-string-in-a-sql-server-table-column
+        //https://www.w3schools.com/SQL/func_sqlserver_replace.asp
+        // Replace items containing F in Location with Z
+        string inlineSQL_Replace = @"UPDATE [dbo].[Produce] Set [Location] = Replace([Location],'F','Z')";
+        using (var command = new SqlCommand(inlineSQL_Replace, conn))
+        {
+            var query = command.ExecuteNonQuery();
+        }
 
         // Delete items with a passed expiration date
         string inlineSQL_Delete = @"Delete from [dbo].[Produce] Where [Sell_by_Date]<'10/19/2023'";
