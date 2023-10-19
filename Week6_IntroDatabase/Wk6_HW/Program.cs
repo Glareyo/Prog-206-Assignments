@@ -82,7 +82,7 @@ using (SqlConnection conn = new SqlConnection(sqlConStr))
         }
 
         //Increase everything by $1
-        string inlineSQL_AddDollar = @"UPDATE [dbo].[Test] Set [Price]+=1.00";
+        string inlineSQL_AddDollar = @"UPDATE [dbo].[Produce] Set [Price]+=1.00";
         using (var command = new SqlCommand(inlineSQL_AddDollar, conn))
         {
             var query = command.ExecuteNonQuery();
