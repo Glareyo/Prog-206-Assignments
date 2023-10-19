@@ -31,6 +31,10 @@ foreach(List<string> dataStrings in data.allFiles[0].Data)
 Console.ReadLine();
 
 
+
+// Credit: Leo Hazou
+//Provided Presentation / Lectures on DataDesign
+
 //Get the database to a string
 //This builds a string that will connect to the target database
 SqlConnectionStringBuilder mySqlConBldr = new SqlConnectionStringBuilder();
