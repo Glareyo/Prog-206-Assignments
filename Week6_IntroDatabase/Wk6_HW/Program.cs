@@ -11,6 +11,7 @@ Console.WriteLine("Executing");
 
 data.InitDataCreation();
 
+
 foreach(List<string> dataStrings in data.allFiles[0].Data)
     foreach(string s in dataStrings)
         Console.WriteLine(s);
@@ -29,3 +30,24 @@ mySqlConBldr["Integrated Security"] = "SSPI"; // Not too sure what this is
 mySqlConBldr["Initial Catalog"] = "PROG260FA23"; // Connect to the target database that holds the table
 
 string sqlConStr = mySqlConBldr.ToString();
+
+using (SqlConnection conn = new SqlConnection(sqlConStr))
+{
+    conn.Open();
+    //Add a new row
+    Console.WriteLine("\n\nInserting a new Row\n\n");
+    foreach(List<string> item in data.allFiles[0].Data)
+    {
+        string inlineSQL = @"INSERT [dbo].[Produce] ([Name],[Location],[Price],[UoM],[Sell_by_Date])";
+        inlineSQL += $" VALUES ('{item[0]}','{item[1]}','{item[2]}',{item[3]},{item[4]})";
+        
+        using (var command = new SqlCommand(inlineSQL, conn))
+        {
+            var query = command.ExecuteNonQuery();
+        }
+    }
+
+
+
+    conn.Close();
+}

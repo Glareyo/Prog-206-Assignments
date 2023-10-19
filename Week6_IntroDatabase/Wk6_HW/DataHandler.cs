@@ -69,31 +69,7 @@ namespace Wk6_HW
             // Decipher csv files
             engine.DecipherFileData(CSVFiles);
 
-            //public void PublishIntoFiles()
         }
-
-        /*public void PublishIntoFiles()
-        {
-            //Go through each file
-            foreach(IFileInformation file in allFiles)
-            {
-                string name = "Sample";
-                
-                if (file.FileType == ".csv")
-                {
-                    name += "CSV";
-                }
-                else
-                {
-                    name += "Pipe";
-                }
-                name += "_out.txt";
-
-                //Create a new text file in the target folder path with the new name.
-                string tempPath = Path.Combine(folderPath, name);
-                File.WriteAllText(tempPath,file.DecipheredData);
-            }
-        }*/
 
         /// <summary>
         /// Create all the target files.
