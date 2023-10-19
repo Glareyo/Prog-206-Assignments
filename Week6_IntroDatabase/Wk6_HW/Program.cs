@@ -61,32 +61,29 @@ using (SqlConnection conn = new SqlConnection(sqlConStr))
         {
             var query = command.ExecuteNonQuery();
         }
+    }
+    //Credit: Documentation + Online Question on how to replace chars within a column
+    //https://stackoverflow.com/questions/814548/how-to-replace-a-string-in-a-sql-server-table-column
+    //https://www.w3schools.com/SQL/func_sqlserver_replace.asp
+    // Replace items containing F in Location with Z
+    string inlineSQL_Replace = @"UPDATE [dbo].[Produce] Set [Location] = Replace([Location],'F','Z')";
+    using (var command = new SqlCommand(inlineSQL_Replace, conn))
+    {
+        var query = command.ExecuteNonQuery();
+    }
 
+    // Delete items with a passed expiration date
+    string inlineSQL_Delete = @"Delete from [dbo].[Produce] Where [Sell_by_Date]<'10/19/2023'";
+    using (var command = new SqlCommand(inlineSQL_Delete, conn))
+    {
+        var query = command.ExecuteNonQuery();
+    }
 
-        
-        //Credit: Documentation + Online Question on how to replace chars within a column
-        //https://stackoverflow.com/questions/814548/how-to-replace-a-string-in-a-sql-server-table-column
-        //https://www.w3schools.com/SQL/func_sqlserver_replace.asp
-        // Replace items containing F in Location with Z
-        string inlineSQL_Replace = @"UPDATE [dbo].[Produce] Set [Location] = Replace([Location],'F','Z')";
-        using (var command = new SqlCommand(inlineSQL_Replace, conn))
-        {
-            var query = command.ExecuteNonQuery();
-        }
-
-        // Delete items with a passed expiration date
-        string inlineSQL_Delete = @"Delete from [dbo].[Produce] Where [Sell_by_Date]<'10/19/2023'";
-        using (var command = new SqlCommand(inlineSQL_Delete, conn))
-        {
-            var query = command.ExecuteNonQuery();
-        }
-
-        //Increase everything by $1
-        string inlineSQL_AddDollar = @"UPDATE [dbo].[Produce] Set [Price]+=1.00";
-        using (var command = new SqlCommand(inlineSQL_AddDollar, conn))
-        {
-            var query = command.ExecuteNonQuery();
-        }
+    //Increase everything by $1
+    string inlineSQL_AddDollar = @"UPDATE [dbo].[Produce] Set [Price]+=1.00";
+    using (var command = new SqlCommand(inlineSQL_AddDollar, conn))
+    {
+        var query = command.ExecuteNonQuery();
     }
 
 
