@@ -17,14 +17,15 @@ namespace Wk6_HW
         public string Path { get; set; }
         public char Delimiter { get; set; }
         public string FileType { get; set; }
-
-        public string DecipheredData { get; set; }
+        public List<List<string>> Data { get; set; }
 
         //Constructor
         public FileInfo(string _name, string _path, DataHandler.DelimiterTypes _delimiter, DataHandler.FileTypes _fileType)
         {
             Name = _name;
             Path = _path;
+            Data = new List<List<string>>();
+
 
             //Determine Delimiter
             if (_delimiter == DataHandler.DelimiterTypes.pipe)
@@ -45,7 +46,6 @@ namespace Wk6_HW
             {
                 FileType = ".txt";
             }
-
         }
     }
 }

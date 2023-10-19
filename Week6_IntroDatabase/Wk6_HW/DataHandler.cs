@@ -32,7 +32,7 @@ namespace Wk6_HW
         //Used mainly for unit testing
         public DataHandler() 
         {
-            folderPath +=@"..\..\..\data";
+            folderPath +=@"..\..\..\..\data";
         }
         public DataHandler(string targetFilePath)
         {
@@ -69,10 +69,10 @@ namespace Wk6_HW
             // Decipher csv files
             engine.DecipherFileData(CSVFiles);
 
-            PublishIntoFiles();
+            //public void PublishIntoFiles()
         }
 
-        public void PublishIntoFiles()
+        /*public void PublishIntoFiles()
         {
             //Go through each file
             foreach(IFileInformation file in allFiles)
@@ -93,7 +93,7 @@ namespace Wk6_HW
                 string tempPath = Path.Combine(folderPath, name);
                 File.WriteAllText(tempPath,file.DecipheredData);
             }
-        }
+        }*/
 
         /// <summary>
         /// Create all the target files.

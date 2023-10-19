@@ -13,6 +13,6 @@ namespace Wk6_HW
         string Path { get; set; }
         char Delimiter { get; set; }
         string FileType { get; set; }
-        string DecipheredData { get; set; }
+        List<List<string>> Data { get; set; }
     }
 }

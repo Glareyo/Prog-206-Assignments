@@ -23,7 +23,7 @@ namespace Wk6_HW
             //Run through each file on the list
             foreach(IFileInformation file in list)
             {
-                file.DecipheredData = DecipherFile(file);
+                DecipherFile(file);
             }
         }
 
@@ -31,32 +31,22 @@ namespace Wk6_HW
         /// Breaks the target file into a readable state
         /// </summary>
         /// <returns>String</returns>
-        public string DecipherFile(IFileInformation file)
+        public void DecipherFile(IFileInformation file)
         {
-            string dataString = "";
             string[] dataLines = File.ReadAllLines(file.Path);
-
-            // Go through each line
-            for(int lineNum = 0; lineNum < dataLines.Length; lineNum++)
+            
+            foreach (string line in dataLines)
             {
-                //Start with which line is being read
-                dataString += $"Line#{lineNum + 1} :";
-                // Break line into text array from delimiter
-                string[] text = dataLines[lineNum].Split(file.Delimiter);
+                List<string> incomingData = new List<string>();
+                string[] strings = line.Split(file.Delimiter);
 
-                //Run a loop through the split text
-                for(int textNum = 0; textNum < text.Length;textNum++)
+                foreach(string item in strings)
                 {
-                    //Add field number and associated text
-                    dataString += $"Field#{textNum + 1}={text[textNum]}";
-
-                    //If it is not the last string of text, add the ==>
-                    if (textNum != text.Length - 1) dataString += " ==> ";
+                    incomingData.Add(item);
                 }
-                dataString += "\n\n";
+                file.Data.Add(incomingData);
             }
 
-            return dataString;
         }
     }
 }
