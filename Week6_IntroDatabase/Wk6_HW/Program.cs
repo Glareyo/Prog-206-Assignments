@@ -42,10 +42,26 @@ using (SqlConnection conn = new SqlConnection(sqlConStr))
         //inlineSQL += $" VALUES ('{item[0]}','{item[1]}','{item[2]}',{item[3]},{item[4]})";
 
         // Insert the produce
-        string inlineSQL = @"INSERT INTO [dbo].[Produce] ([Name],[Location],[Price],[UoM],[Sell_by_Date])";
-        inlineSQL += $" VALUES ('{item[0]}','{item[1]}','{item[2]}','{item[3]}','{item[4]}')";
+        string inlineSQL_one = @"INSERT INTO [dbo].[Produce] ([Name],[Location],[Price],[UoM],[Sell_by_Date])";
+        inlineSQL_one += $" VALUES ('{item[0]}','{item[1]}','{item[2]}','{item[3]}','{item[4]}')";
         
-        using (var command = new SqlCommand(inlineSQL, conn))
+        using (var command = new SqlCommand(inlineSQL_one, conn))
+        {
+            var query = command.ExecuteNonQuery();
+        }
+
+
+
+        // Delete items with a passed expiration date
+        string inlineSQL_Delete = @"Delete from [dbo].[Produce] Where [Sell_by_Date]<'10/19/2023'";
+        using (var command = new SqlCommand(inlineSQL_Delete, conn))
+        {
+            var query = command.ExecuteNonQuery();
+        }
+
+        //Increase everything by $1
+        string inlineSQL_AddDollar = @"UPDATE [dbo].[Test] Set [Price]+=1.00";
+        using (var command = new SqlCommand(inlineSQL_AddDollar, conn))
         {
             var query = command.ExecuteNonQuery();
         }
