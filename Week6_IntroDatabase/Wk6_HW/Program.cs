@@ -38,9 +38,6 @@ using (SqlConnection conn = new SqlConnection(sqlConStr))
     Console.WriteLine("\n\nInserting a new Row\n\n");
     foreach(List<string> item in data.allFiles[0].Data)
     {
-        //string inlineSQL = @"INSERT [dbo].[Produce] ([Name],[Location],[Price],[UoM],[Sell_by_Date])";
-        //inlineSQL += $" VALUES ('{item[0]}','{item[1]}','{item[2]}',{item[3]},{item[4]})";
-
         // Insert the produce
         string inlineSQL_one = @"INSERT INTO [dbo].[Produce] ([Name],[Location],[Price],[UoM],[Sell_by_Date])";
         inlineSQL_one += $" VALUES ('{item[0]}','{item[1]}','{item[2]}','{item[3]}','{item[4]}')";
