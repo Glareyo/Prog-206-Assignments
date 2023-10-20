@@ -38,11 +38,29 @@ namespace Wk7_HW
             foreach (string line in dataLines)
             {
                 List<string> incomingData = new List<string>();
+
+                //Split the data up into an array
                 string[] strings = line.Split(file.Delimiter);
 
-                foreach(string item in strings)
+                for(int position = 0; position < strings.Length; position++)
                 {
-                    incomingData.Add(item);
+                    //Check to see if the string contains '
+                    if (strings[position].Contains('\''))
+                    {
+                        string replacement = "";
+                        foreach(char character in strings[position])
+                        {
+                            if (character == '\'')
+                            {
+                                replacement += character;
+                            }
+                            replacement += character;
+                        }
+                        strings[position] = replacement;
+                    }
+
+
+                    incomingData.Add(strings[position]);
                 }
                 file.Data.Add(incomingData);
             }

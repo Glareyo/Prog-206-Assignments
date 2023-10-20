@@ -82,7 +82,7 @@ namespace Wk7_HW
             foreach (string file in Directory.GetFiles(folderPath))
             {
                 //Filter out files with "_out". These are output files
-                if (!file.Contains("_out"))
+                if (!file.Contains("_out") && !file.Contains(".sql"))
                 {
                     //Needs a name, path, delimiter, and fileType
                     FileInfo newFile;
