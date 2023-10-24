@@ -14,6 +14,10 @@ namespace Wk7_HW
         public enum FileTypes { csv, txt }
         public enum DelimiterTypes { pipe, comma }
 
+        //Arrays for settings types
+        string[] types = { "Ghost", "Human", "Melee Island","Inmate","Pirate","NPC","Mighty Pirate","Politician","Ghost Pirate","Ghost Cook","Fire Ghost"};
+        string[] locations = { "Melee Island","Terror Island", "Brrrmuda","Scurvy Island","LeChuck''s Ship" };
+
         // Holds all files
         public List<IFileInformation> allFiles { get; set; }
         public List<IFileInformation> CSVFiles = new List<IFileInformation>();
@@ -69,6 +73,7 @@ namespace Wk7_HW
             // Decipher csv files
             engine.DecipherFileData(CSVFiles);
 
+            SetIDs();
         }
 
         /// <summary>
@@ -108,6 +113,35 @@ namespace Wk7_HW
 
             //Return new file list
             return allFiles;
+        }
+
+
+        /// <summary>
+        /// Sets the IDs of the information that can be gathered in another table
+        /// </summary>
+        void SetIDs()
+        {
+            //([Character],[Type],[Map_Location],[Original_charachter],[Sword_Fighter],[Magic_User])";
+            //('{item[0]}','{item[1]}','{item[2]}','{item[3]}','{item[4]}','{item[5]}')";
+
+            foreach(List<string> info in CSVFiles[0].Data)
+            {
+                //Check to see what the type matches to
+                for(int index = 0; index < locations.Length; index++)
+                {
+                    if (locations[index].ToLower() == info[2].ToLower())
+                    {
+                        info[2] = $"{index+1}";
+                    }
+                }
+                for(int index = 0; index < types.Length; index++)
+                {
+                    if (types[index].ToLower() == info[1].ToLower())
+                    {
+                        info[1] = $"{index+1}";
+                    }
+                }
+            }
         }
     }
 }

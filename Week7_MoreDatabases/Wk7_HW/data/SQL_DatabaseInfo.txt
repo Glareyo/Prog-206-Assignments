@@ -1,0 +1,2 @@
+server: (localdb)\MSSQLLocalDB
+Database: PROG260FA23
