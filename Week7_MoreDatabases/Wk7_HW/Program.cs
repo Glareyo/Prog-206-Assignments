@@ -162,7 +162,6 @@ void ExecuteSQLCommand(string targetCommand, SqlConnection conn, string targetTe
                     foreach (DataRow dataRow in myTable.Rows) //Run through each row
                     {
                         string info = "";
-                        Console.WriteLine();
                         foreach (DataColumn dataColumn in myTable.Columns) //Run through each column
                         {
                             //Add the information to the temp string
