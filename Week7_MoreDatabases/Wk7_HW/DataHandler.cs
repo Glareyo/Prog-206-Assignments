@@ -73,7 +73,7 @@ namespace Wk7_HW
             // Decipher csv files
             engine.DecipherFileData(CSVFiles);
 
-            SetIDs();
+            //SetIDs();
         }
 
         /// <summary>
@@ -123,21 +123,28 @@ namespace Wk7_HW
         {
             //([Character],[Type],[Map_Location],[Original_charachter],[Sword_Fighter],[Magic_User])";
             //('{item[0]}','{item[1]}','{item[2]}','{item[3]}','{item[4]}','{item[5]}')";
+            Console.WriteLine("\n\n\n\nTargeting IDs");
 
             foreach(List<string> info in CSVFiles[0].Data)
             {
+                Console.Write(info[0]+":");
                 //Check to see what the type matches to
                 for(int index = 0; index < locations.Length; index++)
                 {
                     if (locations[index].ToLower() == info[2].ToLower())
                     {
+                        
                         info[2] = $"{index+1}";
                     }
                 }
+
+                Console.WriteLine($" => {info[1].ToLower()}");
                 for(int index = 0; index < types.Length; index++)
                 {
+                    Console.WriteLine($" => Comparing to {types[index].ToLower()}");
                     if (types[index].ToLower() == info[1].ToLower())
                     {
+                        Console.WriteLine($"Changing {info[1]} to {index + 1}");
                         info[1] = $"{index+1}";
                     }
                 }

@@ -42,26 +42,42 @@ namespace Wk7_HW
                 //Split the data up into an array
                 string[] strings = line.Split(file.Delimiter);
 
-                for(int position = 0; position < strings.Length; position++)
+                //Arrays for settings types
+                string[] types = { "Ghost", "Human", "Melee Island", "Inmate", "Pirate", "NPC", "Mighty Pirate", "Politician", "Ghost Pirate", "Ghost Cook", "Fire Ghost" };
+                string[] locations = { "Melee Island", "Terror Island", "Brrrmuda", "Scurvy Island", "LeChuck's ship" };
+
+                
+
+
+
+                for (int position = 0; position < strings.Length; position++)
                 {
-                    //Check to see if the string contains '
-                    if (strings[position].Contains('\''))
+                    //Trim spaces from start since 
+                    strings[position] = strings[position].TrimStart();
+
+                    //Check types to convert to IDs
+                    for (int index = 0; index < locations.Length; index++)
                     {
-                        string replacement = "";
-                        foreach(char character in strings[position])
+                        if (locations[index] == strings[position])
                         {
-                            if (character == '\'')
-                            {
-                                replacement += character;
-                            }
-                            replacement += character;
+                            strings[position] = $"{index + 1}";
                         }
-                        strings[position] = replacement;
+                    }
+
+                    for (int target = 0; target < types.Length; target++)
+                    {
+                        if (types[target] == strings[position])
+                        {
+                            strings[position] = $"{target + 1}";
+                        }
                     }
 
 
                     incomingData.Add(strings[position]);
                 }
+                
+                
+                
                 file.Data.Add(incomingData);
             }
             file.Data.RemoveAt(0);
