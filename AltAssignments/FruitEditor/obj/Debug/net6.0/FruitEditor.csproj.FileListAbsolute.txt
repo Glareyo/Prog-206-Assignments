@@ -1,0 +1,15 @@
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\bin\Debug\net6.0\FruitEditor.exe
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\bin\Debug\net6.0\FruitEditor.deps.json
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\bin\Debug\net6.0\FruitEditor.runtimeconfig.json
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\bin\Debug\net6.0\FruitEditor.dll
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\bin\Debug\net6.0\FruitEditor.pdb
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.csproj.AssemblyReference.cache
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.AssemblyInfoInputs.cache
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.AssemblyInfo.cs
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.csproj.CoreCompileInputs.cache
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.dll
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\refint\FruitEditor.dll
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.pdb
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\FruitEditor.genruntimeconfig.cache
+C:\Users\nemo1\source\repos\Glareyo\Prog-206-Assignments\AltAssignments\FruitEditor\obj\Debug\net6.0\ref\FruitEditor.dll
